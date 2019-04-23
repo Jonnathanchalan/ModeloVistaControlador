@@ -95,5 +95,39 @@ public class Persona {
     public void nombre(){
         System.out.println("Este codigo imprime el nombre de cada trabajador");
     }
-    
+     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            System.out.println("mismo objeto");
+            return true;
+        }
+        if (obj == null) {
+            System.out.println("vacio");
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            System.out.println("clases diferentes");
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.codigo != other.codigo) {
+            System.out.println("codigos diferentes");
+            return false;
+        }
+        System.out.println("iguales");
+        return true;
+
+    }
+
+    //Sorted Set
+    public int compareTo(Persona o) {
+        return nombre.compareTo(o.nombre);
+    }
 }

@@ -5,12 +5,14 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.Interfaces.Demanda;
+
 /**
  *  Clase "Hija" que hereda los atributos de la clase Empleado, ademas determina las
  * acciones de un despachador
  * @author jonnathan
  */
-public class Despachador {
+public final class Despachador extends Empleado implements Demanda {
     
     private String revisarFactura;
     private int revisarProductos ;
@@ -64,7 +66,18 @@ public class Despachador {
         this.entregarProcuctos = entregarProcuctos;
     }
 
+   
+
     @Override
+    public String importar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String exportar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     @Override
     public String toString() {
         return "Despachador{" + "revisarFactura=" + revisarFactura + ""
                 + ", revisarProductos=" + revisarProductos + ", alistarProductos="

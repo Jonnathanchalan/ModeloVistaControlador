@@ -5,6 +5,8 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.Interfaces.Demanda;
+
 /**
  * @since 2019
  * @version 2.1
@@ -14,7 +16,7 @@ package ec.edu.ups.clases;
  */
 
     
-    public class Minorista extends Cliente {
+    public final class Minorista extends Cliente implements Demanda {
 
     private double pagoPorServicio;
     private double cambioRecibido;
@@ -43,6 +45,14 @@ package ec.edu.ups.clases;
         this.cambioRecibido = cambioRecibido;
         this.calificacionPorServicio = calificacionPorServicio;
         this.recomendadoPor = recomendadoPor;
+    }
+
+    public Minorista(String nombre, int cantidad, int dni, int ruc, boolean valorc) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Minorista(String nombre, boolean cantidad, int dni, int ruc, boolean valorc) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public double getPagoPorServicio() {
@@ -90,19 +100,7 @@ package ec.edu.ups.clases;
         System.out.println("Compara marcas de productos");
     }
 
-    /**
-     * Método toString que devuelve una cadena de texto, imprimiendo todos los
-     * atributos solicitados
-     *
-     * @return (String) la cadena de texto a imprimir
-     */
-    @Override
-    public String toString() {
-        return "ClienteOcasional{" + "pagoPorServicio=" + pagoPorServicio
-                + ", cambioRecibido=" + cambioRecibido
-                + ", calificacionPorServicio=" + calificacionPorServicio
-                + ", recomendadoPor=" + recomendadoPor + '}';
-    }
+   
 
     public void pedirFactura() {
         System.out.println("Pide factura física como respaldo");
@@ -110,6 +108,29 @@ package ec.edu.ups.clases;
 
     public void GuiarseParaLlegar() {
         System.out.println("Mediante una aplicación GPS");
+    }
+
+    @Override
+    public String importar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String exportar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     /**
+     * Método toString que devuelve una cadena de texto, imprimiendo todos los
+     * atributos solicitados
+     *
+     * @return (String) la cadena de texto a imprimir
+     */
+     @Override
+    public String toString() {
+        return "ClienteOcasional{" + "pagoPorServicio=" + pagoPorServicio
+                + ", cambioRecibido=" + cambioRecibido
+                + ", calificacionPorServicio=" + calificacionPorServicio
+                + ", recomendadoPor=" + recomendadoPor + '}';
     }
 
 }

@@ -67,10 +67,7 @@ package ec.edu.ups.clases;
         this.salario = salario;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" + "cargo=" + cargo + ", departamento=" + departamento + ", salario=" + salario + '}';
-    }
+    
     
     
      public String sec() {
@@ -85,7 +82,10 @@ package ec.edu.ups.clases;
         return "La seccion " + super.getNombre() + "administracion";
     }
      
-      
+     @Override
+    public String toString() {
+        return "Empleado{" + "cargo=" + cargo + ", departamento=" + departamento + ", salario=" + salario + '}';
+    } 
     
 
     

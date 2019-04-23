@@ -6,6 +6,7 @@
 package ec.edu.ups.clases;
     
 
+import ec.edu.ups.Interfaces.Demanda;
 import java.util.GregorianCalendar;
    
 /**
@@ -16,7 +17,7 @@ import java.util.GregorianCalendar;
  * @author jonnathan
  */
 
-    public  final class Mayorista extends Cliente {
+    public  final class Mayorista extends Cliente implements Demanda {
 
     private GregorianCalendar fechaClienteMayorista;
     private int numCreditos;
@@ -46,6 +47,14 @@ import java.util.GregorianCalendar;
         this.numCreditos = numCreditos;
         this.ordenCompra = ordenCompra;
         this.fechaRetiroMercaderia = fechaRetiroMercaderia;
+    }
+
+    public Mayorista(String nombre, String categoria, String area, String numcre, String orcom, int valor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Mayorista(String nombre, String categoria, String area, int numcre, String orcom, int valor) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public GregorianCalendar getFechaClienteFijo() {
@@ -92,6 +101,17 @@ import java.util.GregorianCalendar;
         System.out.println("Paga las facturas para minorizar los créditos");
     }
 
+    
+
+    @Override
+    public String importar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String exportar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     @Override
     public String toString() {
         return "ClienteMayorista{" + "fechaClienteMayorista=" + fechaClienteMayorista

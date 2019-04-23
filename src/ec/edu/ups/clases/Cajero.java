@@ -5,6 +5,8 @@
  */
 package ec.edu.ups.clases;
 
+import ec.edu.ups.Interfaces.Demanda;
+
 /**
  * @version 2.1
  * @since 2019
@@ -12,7 +14,9 @@ package ec.edu.ups.clases;
  * acciones de un cajero
  * @author jonnathan
  */
-public class Cajero {
+public final class Cajero extends Empleado implements Demanda{
+
+   
     
     private String descripcionProducto ;
     private int cantidadPedido;
@@ -32,6 +36,10 @@ public class Cajero {
         this.cantidadPedido = cantidadPedido;
         this.comprobarStoock = comprobarStoock;
         this.valorVenta = valorVenta;
+    }
+
+    public Cajero(String codigop, String nombre, String evaporador, String termoestato, String lineaPequenia, String limpieza, String clima, String cocina, int codigo, String marca, String nombre0, double precio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getDescripcionProducto() {
@@ -66,15 +74,23 @@ public class Cajero {
         this.valorVenta = valorVenta;
     }
 
+   
+
     @Override
+    public String importar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String exportar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     @Override
     public String toString() {
         return "Cajero{" + "descripcionProducto="
                 + descripcionProducto + ", cantidadPedido=" + cantidadPedido + ","
                 + " comprobarStoock=" + comprobarStoock + ", valorVenta=" + valorVenta + '}';
     }
-    
-    
-    
-    
-    
+
+  
 }
