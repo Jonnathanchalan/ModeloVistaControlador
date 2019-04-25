@@ -13,6 +13,9 @@ import ec.edu.ups.controladores.ControladorCajero;
 import ec.edu.ups.controladores.ControladorDespachador;
 import ec.edu.ups.controladores.ControladorMayorista;
 import ec.edu.ups.controladores.ControladorMinorista;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -21,7 +24,7 @@ import java.util.Scanner;
  */
 public class Principal {
     
-    public static void main(String[]arg){
+    public static void main(String[]arg) throws ParseException{
         Scanner escaner = new Scanner(System.in);
         boolean repetir = true;
         ControladorCajero controladorCajero = new ControladorCajero();
@@ -55,8 +58,11 @@ public class Principal {
                                 String orcom = escaner.next();
                                 System.out.println("Ingrese el valor total compra");
                                 int valor = escaner.nextInt();
-                                
-                                Mayorista objeto = new Mayorista(nombre,categoria,area,numcre,orcom,valor);
+                                System.out.println("ingrese fecha de compra:");
+                                Date miDate = new SimpleDateFormat("dd/MM/yyyy").parse(escaner.next());
+                                System.out.println("fecha de entrega");
+                                String fechaRetiroMercaderia=escaner.next();
+                                Mayorista objeto = new Mayorista(miDate, numcre, orcom, fechaRetiroMercaderia, orcom, numcre, orcom, numcre, opcion, nombre, area, orcom);
                                 controladorCajero.create(objeto);
                                 break;
                             case 2:
