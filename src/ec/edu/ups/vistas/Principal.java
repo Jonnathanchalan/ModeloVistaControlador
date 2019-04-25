@@ -42,7 +42,7 @@ public class Principal {
                 case 1:
                     boolean repetirMayorista = true;
                     do {
-                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Regresar");
+                         System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Listar\n6) Regresar");
                         int opcionMayorista = escaner.nextInt();
                         switch (opcionMayorista) {
                             case 1:
@@ -104,7 +104,7 @@ public class Principal {
                 case 2:
                     boolean repetirMinorista = true;
                     do {
-                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Imprimir\n6) Regresar");
+                         System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Listar\n6) Regresar");
                         int opcionMinorista = escaner.nextInt();
                         switch (opcionMinorista) {
                             case 1:
@@ -171,7 +171,7 @@ public class Principal {
                 case 3:
                     boolean repetirCajero = true;
                     do {
-                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Imprimir\n6) Regresar");
+                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Listar\n6) Regresar");
                         int opcionCajero = escaner.nextInt();
                         switch (opcionCajero) {
                             case 1:
@@ -234,7 +234,7 @@ public class Principal {
                 case 4:
                     boolean repetirDespachador = true;
                     do {
-                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Imprimir\n6) Regresar");
+                        System.out.println("Elija una opcion:\n1) Create\n2) Read\n3) Update\n4) Delete\n5) Listar\n6) Regresar");
                         int opcionDespachador = escaner.nextInt();
                         switch (opcionDespachador) {
                             case 1:
